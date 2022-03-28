@@ -1,0 +1,12 @@
+<div class="card mb-3">
+    <img [src]="character.image" width="10%" class="card-img-top">
+    <div class="card-body">
+        <h2 class="card-title">{{character.name}}</h2>
+        <h4 class="card-text">{{ character.gender }}</h4>
+        <h5 class="text-muted">{{ character.species }}</h5>
+        <p class="text-muted">{{character.origin?.name}}</p>
+        <p class="text-muted">{{character.location?.name}}</p>
+        <p class="text-muted">{{character.status}}</p>
+        <p class="card-text"><small class="text-muted">{{ character.created | date}}</small></p>
+    </div>
+</div>

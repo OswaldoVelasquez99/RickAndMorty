@@ -1,0 +1,28 @@
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+
+        <!-- Icon -->
+        <div class="fadeIn first">
+            <img src="../../assets/LogoUISEK.png" id="icon" alt="User Icon" />
+        </div>
+
+        <!-- Login Form -->
+        <form>
+            <input type="email" id="login" class="fadeIn second" name="login" placeholder="login"
+                [(ngModel)]="usuario.email">
+            <input type="password" id="password" class="fadeIn third" name="login" placeholder="password"
+                [(ngModel)]="usuario.password">
+            <input type="submit" class="fadeIn fourth" value="Sing in" (click)="Ingresar()">
+            <input type="submit" class="fadeIn fourth" value="Sing in with Google" (click)="IngresarGoogle()">
+        </form>
+
+        <!-- Remind Passowrd -->
+        <div id="formFooter">
+            <label>Aun no tienes cuenta?</label><a class="underlineHover" routerLink="/register"> Registrate</a>
+            
+        </div>
+
+        
+
+    </div>
+</div>

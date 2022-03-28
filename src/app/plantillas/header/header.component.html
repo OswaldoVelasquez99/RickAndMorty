@@ -1,0 +1,21 @@
+<header>
+  <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+    <h5 class="my-0 mr-md-auto font-weight-normal">Rick and Morty <span class="text-danger">UISEK</span></h5>
+    <nav class="my-2 my-md-0 mr-md-3">
+      <a class="p-2 text-dark" routerLink="/">Home</a>
+      <a class="p-2 text-dark" routerLink="/episodes">Episodes</a>
+      <a class="p-2 text-dark" routerLink="/locations">Locations</a>
+    </nav>
+    <!--a class="btn btn-outline-primary float-right" href="/login">Sign up</!--a-->
+
+    
+    <nav *ngIf="userLogged|async as user; else btnIngresar">
+      <h5 class="my-0 mr-md-auto font-weight-normal">{{ user.displayName?user.displayName : user.email }}</h5>
+      <a class="btn btn-outline-primary float-right" (click)="logout()">Salir</a>
+    </nav>
+
+    <ng-template #btnIngresar>
+      <a class="btn btn-outline-primary float-right" href="/login">Iniciar Sesion</a>
+    </ng-template>
+  </div>
+</header>

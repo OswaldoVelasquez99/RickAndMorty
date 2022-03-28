@@ -1,0 +1,9 @@
+<div class="list-group" *ngFor="let episode of episodes">
+    <a  class="list-group-item list-group-item-action" (click)="goToEpisode(episode.id)">
+        <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">{{episode.name}}</h5>
+            <small class="text-muted">{{ episode.episode }}</small>
+        </div>
+        <p class="mb-1">{{ episode.air_date }}</p>
+    </a><br>
+</div>
